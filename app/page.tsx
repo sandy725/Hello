@@ -133,8 +133,11 @@ export default function Page() {
         <div className="contact-inner"><div><h2>Have a good idea?<br /><em>Let&apos;s make it real.</em></h2><div className="contact-details"><a href="mailto:hello@sandeepstudio.in">hello@sandeepstudio.in</a><a href="tel:+919815002027">+91 98150 02027</a></div></div><ContactForm /></div>
       </section>
 
-      <footer className="site-footer shell"><span>© {new Date().getFullYear()} Sandeep Kumar</span><span>Web development · UI/UX · Ecommerce</span><a href="https://linkedin.com/in/sandeep-kumar-5026b527" target="_blank" rel="noreferrer">LinkedIn <Arrow /></a></footer>
-    </main>
+  <footer className="site-footer shell"><span>© {new Date().getFullYear()} Sandeep Kumar</span><span>Web development · UI/UX · Ecommerce</span><a href="https://linkedin.com/in/sandeep-kumar-5026b527" target="_blank" rel="noreferrer">LinkedIn <Arrow /></a></footer>
+  <a className="whatsapp-float" href="https://wa.me/919815002027" target="_blank" rel="noopener noreferrer" aria-label="Chat with Sandeep Kumar on WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M20.52 3.48A11.82 11.82 0 0 0 12.1 0C5.55 0 .22 5.33.22 11.88c0 2.1.55 4.15 1.6 5.96L.12 24l6.32-1.66a11.9 11.9 0 0 0 5.66 1.44h.01c6.55 0 11.88-5.33 11.88-11.88 0-3.17-1.23-6.15-3.47-8.42ZM12.1 21.75h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.75.98 1-3.65-.24-.38a9.85 9.85 0 0 1-1.52-5.23c0-5.47 4.46-9.93 9.94-9.93a9.87 9.87 0 0 1 7.03 2.91 9.88 9.88 0 0 1 2.9 7.04c0 5.48-4.46 9.93-9.95 9.93Zm5.45-7.44c-.3-.15-1.77-.87-2.05-.97-.28-.1-.48-.15-.68.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.68-1.63-.93-2.23-.24-.58-.49-.5-.68-.51h-.58c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.43-.07-.13-.27-.2-.57-.35Z"/></svg>
+  </a>
+  </main>
   )
 }
 
