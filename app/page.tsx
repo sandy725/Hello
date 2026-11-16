@@ -85,8 +85,9 @@ export default function Page() {
       <section id="top" className="hero shell">
         <div className="hero-copy">
           <p className="kicker"><span className="status-dot" /> Independent web developer · UI/UX designer</p>
-          <h1>Digital experiences<br /><em>built to move</em> business.</h1>
-          <p className="hero-intro">I&apos;m Sandeep Kumar. I design and develop thoughtful Shopify, WordPress, and custom websites that look sharp, feel effortless, and help brands grow.</p>
+          <h1>Good design gets attention.<br /><em>Great websites get results.</em></h1>
+          <p className="hero-intro">I help ambitious brands turn their digital presence into their biggest business advantage.</p>
+          <p className="hero-intro">Custom Shopify stores, WordPress websites, and thoughtful digital experiences — designed with purpose and built for performance.</p>
           <div className="hero-actions">
             <a href="#work" className="button button-dark">Explore selected work <Arrow /></a>
             <a href="https://linkedin.com/in/sandeep-kumar-5026b527" target="_blank" rel="noreferrer" className="text-link">LinkedIn <Arrow /></a>
