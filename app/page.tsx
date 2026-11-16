@@ -45,7 +45,7 @@ function ContactForm() {
   )
 }
 
-function ProjectGroup({ number, title, description, items }: { number: string; title: string; description: string; items: { name: string; url: string }[] }) {
+function ProjectGroup({ number, title, description, challenge, approach, deliverable, items }: { number: string; title: string; description: string; challenge: string; approach: string; deliverable: string; items: { name: string; url: string }[] }) {
   return (
     <article className="project-group">
       <div className="project-heading">
@@ -54,6 +54,11 @@ function ProjectGroup({ number, title, description, items }: { number: string; t
           <h3>{title}</h3>
           <p>{description}</p>
         </div>
+      </div>
+      <div className="project-details">
+        <div><span>Challenge</span><p>{challenge}</p></div>
+        <div><span>Approach</span><p>{approach}</p></div>
+        <div><span>Delivered</span><p>{deliverable}</p></div>
       </div>
       <div className="project-links">
         {items.map((item) => (
@@ -85,11 +90,12 @@ export default function Page() {
       <section id="top" className="hero shell">
         <div className="hero-copy">
           <p className="kicker"><span className="status-dot" /> Independent web developer · UI/UX designer</p>
-          <h1>Digital experiences<br /><em>built to move</em> business.</h1>
-          <p className="hero-intro">I&apos;m Sandeep Kumar. I design and develop thoughtful Shopify, WordPress, and custom websites that look sharp, feel effortless, and help brands grow.</p>
+          <h1>I build websites your next customer <em>remembers.</em></h1>
+          <p className="hero-intro">Independent developer. Direct collaboration. No handoffs between a sales team and the person building your site.</p>
+          <p className="hero-intro">Shopify Liquid, custom WordPress, Figma-to-WordPress, and performance optimization for brands ready to grow.</p>
           <div className="hero-actions">
-            <a href="#work" className="button button-dark">Explore selected work <Arrow /></a>
-            <a href="https://linkedin.com/in/sandeep-kumar-5026b527" target="_blank" rel="noreferrer" className="text-link">LinkedIn <Arrow /></a>
+            <a href="#contact" className="button button-dark">Let&apos;s talk about your project <Arrow /></a>
+            <a href="#work" className="text-link">See selected work <Arrow /></a>
           </div>
         </div>
         <div className="hero-portrait-wrap">
@@ -103,23 +109,35 @@ export default function Page() {
       </section>
 
       <section id="about" className="about shell">
-        <div className="section-label"><span>01</span><span>About</span></div>
-        <div className="about-content"><p className="display-copy">A reliable partner for <em>clear thinking</em>, clean interfaces, and websites that do their job.</p><p className="body-copy">From the first wireframe to the final line of code, I care about the details that make a digital product feel right. I bring a designer&apos;s eye and a developer&apos;s discipline to every project.</p></div>
+        <div className="section-label"><span>01</span><span>How I work</span></div>
+        <div className="about-content"><p className="display-copy">One-to-one collaboration. <em>From first sketch to launch.</em></p><p className="body-copy">You work directly with me throughout the project. I ask the right questions, share progress early, and stay involved through launch, so decisions stay clear and the finished site reflects your business.</p></div>
+      </section>
+
+      <section className="expertise shell" aria-labelledby="expertise-title">
+        <div className="section-label"><span>02</span><span>What I bring to the build</span></div>
+        <h2 id="expertise-title">Design detail.<br /><em>Developer depth.</em></h2>
+        <div className="expertise-grid">
+          <article><span>01</span><h3>Shopify Liquid</h3><p>Custom storefront sections and theme work shaped around your catalog, brand, and buying journey.</p></article>
+          <article><span>02</span><h3>Custom WordPress</h3><p>Purpose-built themes and flexible editing experiences, without a cookie-cutter template feel.</p></article>
+          <article><span>03</span><h3>Figma to WordPress</h3><p>Faithful implementation of design systems, responsive layouts, and the small details that make a design feel right.</p></article>
+          <article><span>04</span><h3>Performance optimization</h3><p>Lean front ends, careful asset choices, and speed-minded improvements for a smoother customer experience.</p></article>
+        </div>
+        <a href="#contact" className="text-link expertise-cta">Need help with a build? Let&apos;s talk <Arrow /></a>
       </section>
 
       <section id="work" className="work shell">
-        <div className="section-label"><span>02</span><span>Selected work</span></div>
-        <div className="work-intro"><h2>Projects with purpose.</h2><p>Explore a selection of live websites I&apos;ve designed, built, and helped bring to market.</p></div>
+        <div className="section-label"><span>03</span><span>Selected work</span></div>
+        <div className="work-intro"><div><h2>Live work.<br /><em>Built for real businesses.</em></h2><p>Each build starts with the business challenge and ends with a useful, launch-ready website.</p></div><a href="#contact" className="button button-dark">Have a project in mind? <Arrow /></a></div>
         <div className="project-list">
-          <ProjectGroup number="01" title="Shopify commerce" description="Conversion-minded storefronts for modern retail brands." items={projects.shopify} />
-          <ProjectGroup number="02" title="Mixed ecommerce" description="Flexible ecommerce builds across platforms and categories." items={projects.mixed} />
-          <ProjectGroup number="03" title="Skincare & wellness" description="Calm, credible digital homes for healthcare brands." items={projects.skincare} />
-          <ProjectGroup number="04" title="WordPress builds" description="Content-rich websites that are easy to own and grow." items={projects.wordpress} />
+          <ProjectGroup number="01" title="Shopify commerce" description="Storefronts for retail brands selling online." challenge="Help shoppers find products and feel confident buying." approach="Shape a clear storefront around product discovery and brand identity." deliverable="A tailored Shopify experience, built to support browsing and checkout." items={projects.shopify} />
+          <ProjectGroup number="02" title="Mixed ecommerce" description="Ecommerce across different catalogs and business models." challenge="Make varied products and buying journeys easy to understand." approach="Organize the storefront around the needs of each business and its customers." deliverable="Flexible ecommerce experiences, linked to the live stores." items={projects.mixed} />
+          <ProjectGroup number="03" title="Skincare & wellness" description="Digital homes for health and wellness services." challenge="Communicate services clearly and make the next step easy to find." approach="Use calm visual hierarchy and straightforward service information." deliverable="Focused websites that guide visitors toward learning more or getting in touch." items={projects.skincare} />
+          <ProjectGroup number="04" title="WordPress builds" description="Content-led sites for growing service brands." challenge="Present essential information clearly while keeping content manageable." approach="Build around readable page structures and responsive layouts." deliverable="Custom WordPress websites designed to be useful for visitors and owners." items={projects.wordpress} />
         </div>
       </section>
 
       <section id="testimonials" className="testimonials shell">
-        <div className="section-label"><span>03</span><span>Client notes</span></div>
+        <div className="section-label"><span>04</span><span>Client notes</span></div>
         <div className="testimonials-intro"><h2>Good work should<br /><em>feel easy.</em></h2><p>A few things clients tend to value most when we work together.</p></div>
         <div className="testimonial-grid">
           <figure className="testimonial-card"><blockquote>“Sandeep understood what the business needed, not just what the website needed. The whole process felt clear and well-organised.”</blockquote><figcaption><strong>Founder</strong><span>Retail & ecommerce</span></figcaption></figure>
@@ -129,7 +147,7 @@ export default function Page() {
       </section>
 
       <section id="contact" className="contact shell">
-        <div className="section-label"><span>04</span><span>Start a project</span></div>
+        <div className="section-label"><span>05</span><span>Start a project</span></div>
         <div className="contact-inner"><div><h2>Have a good idea?<br /><em>Let&apos;s make it real.</em></h2><div className="contact-details"><a href="mailto:hello@sandeepstudio.in">hello@sandeepstudio.in</a><a href="tel:+919815002027">+91 98150 02027</a></div></div><ContactForm /></div>
       </section>
 
